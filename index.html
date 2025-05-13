@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Chai Junction</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>The Chai Junction</h1>
+<nav>
+<h3><a href="#menu">Menu</a></h3>
+<h3><a href="#order-form">Place Your Order</a></h3>
+</nav>
+</header>
+<main>
+<section id="menu">
+<article>                    
+<img src="https://www.teacupsfull.com/cdn/shop/articles/Screenshot_2023-10-20_at_11.07.13_AM.png?v=1697780292" alt="Masala Chai Bomb" width="355" height="200">
+<h3>Masala Chai Bomb</h3>
+<p>A strong, spiced tea blend simmered with cardamom, ginger, and a secret house masala. Served in a rustic kulhad. <i>₹40</i></p>
+</article>
+<article>                    
+<img src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/tfkwkevryxoeaxihih1n" alt="Bun Maska Reloaded" width="355" height="200">
+<h3>Bun Maska Reloaded</h3>
+<p>Classic Mumbai-style bun with a generous layer of butter, lightly toasted, and sprinkled with jaggery crumble. <i>₹60</i></p>
+</article>
+<article>                    
+<img src="https://images.slurrp.com/prodarticles/z71rmu1c8s.webp" alt="Tandoori Maggi Tadka" width="355" height="200">
+<h3>Tandoori Maggi Tadka</h3>
+<p>Maggi noodles tossed with smoky tandoori masala, veggies, and a sizzling ghee tadka. <i>₹120</i></p>
+</article>
+</section>              
+<section id="order-form">
+<h2 class="vertical-title">Place Your Order</h2>               
+<div class="order-card">
+<form>
+<div class="form-group">
+<label for="chai-qty">Masala Chai Bomb (₹40):</label>
+<input type="number" id="chai-qty" name="chai-qty" min="0">
+</div>
+<div class="form-group">
+<label for="bun-qty">Bun Maska Reloaded (₹60):</label>
+<input type="number" id="bun-qty" name="bun-qty" min="0">
+</div>
+<div class="form-group">
+<label for="maggi-qty">Tandoori Maggi Tadka (₹120):</label>
+<input type="number" id="maggi-qty" name="maggi-qty" min="0">
+</div>                    
+<div class="form-group">
+<div style="width: 100%; display: flex; align-items: center; gap: 20px;">
+<p style="margin: 0; font-weight: bold; min-width: fit-content;">Add-ons:</p>
+<div class="addon-options" style="margin: 0;">
+<label class="addon-label"><input type="checkbox" name="extra-butter" value="yes"> Butter +₹10</label>
+<label class="addon-label"><input type="checkbox" name="extra-spice" value="yes"> Spicy +₹5</label>
+</div>
+</div>
+</div>
+<div class="full-width">
+<label for="special-requests">Special Requests:</label>
+<textarea id="special-requests" name="special-requests" rows="4" style="width: 100%;"></textarea>
+</div>
+<div class="full-width">
+<input type="submit" value="Go To Checkout" style="width: 100%;">
+</form>
+</div>           
+</section>
+</main>
+<footer>
+Made with 💖 by Itsharshitgoat
+</footer>
+</body>
+</html>

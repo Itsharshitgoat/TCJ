@@ -5,6 +5,8 @@
 --border-radius-lg: 25px;
 --border-radius-md: 15px;
 --border-radius-sm: 8px;
+--container-padding: clamp(10px, 2vw, 20px);
+--content-width: clamp(300px, 90vw, 1200px);
 }
 
 html {
@@ -13,9 +15,9 @@ html {
 
 body {
 font-family: Arial, sans-serif;
-max-width: 1200px;
+width: var(--content-width);
 margin: 0 auto;
-padding: 20px;
+padding: var(--container-padding);
 background-color: var(--cream);
 }
 header {
@@ -27,15 +29,15 @@ nav {
      display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    width: min(95%, 1100px);
+    padding: clamp(12px, 2vw, 15px) clamp(20px, 3vw, 30px);
     background-color: var(--dark-brown);
     border-radius: var(--border-radius-lg);
     margin: 10px auto;
-    max-width: 1100px;
 }
 .nav-brand h1 {
     margin: 0;
-    font-size: 1.8em;
+    font-size: clamp(1.4em, 3vw, 1.8em);
     color: white;
 }
 .nav-links {
@@ -46,8 +48,8 @@ nav {
     text-decoration: none;
     color: white;
     font-weight: 500;
-    font-size: 1.1em;
-    padding: 8px 20px;
+    font-size: clamp(0.9em, 1.5vw, 1.1em);
+    padding: clamp(6px, 1vw, 8px) clamp(15px, 2vw, 20px);
     border-radius: var(--border-radius-md);
     background-color: rgba(255, 255, 255, 0.1);
     transition: all 0.2s ease-in-out;
@@ -69,8 +71,8 @@ nav {
 }
 #menu {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 20px;
+grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+gap: clamp(15px, 2vw, 20px);
 margin-bottom: 40px;
 }            
 article {
@@ -86,14 +88,18 @@ transform: translateY(-3px);
 box-shadow: 0 4px 8px rgba(93, 64, 55, 0.2);
 }
 article img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
     border-radius: var(--border-radius-md);
     overflow: hidden;
 }
 #order-form {
-max-width: 800px;
+width: min(95%, 800px);
 margin: 0 auto;
 position: relative;
-padding: 30px 30px 30px 80px;
+padding: clamp(25px, 3vw, 30px) clamp(25px, 3vw, 30px) clamp(25px, 3vw, 30px) clamp(70px, 8vw, 80px);
 border: 1px solid var(--dark-brown);
 background-color: white;
 box-shadow: 0 4px 6px rgba(93, 64, 55, 0.1);
@@ -112,8 +118,8 @@ transform: rotate(-90deg) translateX(-50%);
 transform-origin: left;
 background-color: var(--dark-brown);
 color: white;
-padding: 5px 40px;
-font-size: 1.4em;
+padding: clamp(4px, 1vw, 5px) clamp(30px, 4vw, 40px);
+font-size: clamp(1.2em, 2vw, 1.4em);
 white-space: nowrap;
 letter-spacing: 1px;
 text-transform: uppercase;
@@ -133,11 +139,11 @@ display: flex;
 align-items: center;
 gap: 10px;
 background-color: var(--cream);
-padding: 15px;
+padding: clamp(12px, 1.5vw, 15px);
 border-radius: var(--border-radius-md);
 }
 input[type="number"] {
-width: 80px;
+width: clamp(60px, 10vw, 80px);
 padding: 8px;
 border: 1px solid var(--light-brown);
 border-radius: var(--border-radius-sm);
@@ -162,8 +168,8 @@ gap: 3px;
 padding: 4px 8px;
 background-color: white;
 border: 1px solid var(--light-brown);
-font-size: 0.85em;
-min-width: 90px;
+font-size: clamp(0.8em, 1.2vw, 0.85em);
+min-width: clamp(80px, 15vw, 90px);
 border-radius: var(--border-radius-sm);
 transition: all 0.2s ease-in-out;
 }
